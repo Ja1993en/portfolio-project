@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ 
+ body {
+    padding: 10px;
+ }
+
+ #viewport {
+     display: flex;
+     /* makes the hear size itself based on columns instead of row  */
+     flex-direction: column;
+     /* adds a gap under the header  between the vertical  */
+     gap: 30px;
+ }
+/*grabed the header footer and columns and adds outline to it  */
+ header, footer, .column { 
+     outline: 1px solid black;
+     min-height: 100px;
+     display: flex;
+     justify-content: center;
+ }
+ p {
+     font-size: 200%;
+    
+ }
+/* grabed the header and footer to  */
+ header, footer {
+     /* make the width 100% of the page  */
+     width: 100%;
+ }
+
+.column {
+    outline: 1px solid black;
+    /* vh take as much space it can */
+    height: 100vh;
+    /* sets the middle to 60% width */
+    width: 70%;
+    /* add paddin to the left specifically  */
+    padding-left: 20px;
+    /* add padding to the right specifically */
+    padding-right: 20px;
+    
+}
+
+.column1, .column3 {
+    width: 15%;
+    height: 300px;
+
+}
+
+/* flex container holds the column elements 
+set up flex for the columns  */
+.flex-container {
+    display: flex;
+    /* makes everything align in one row */
+    flex-direction: row;
+    /* Wrap the text to a new level */
+    /* Flex wrap comes into play when their is not enough space */
+    flex-wrap: wrap;
+    /* put a gap between each div  */
+
+    gap: 0px;
+    /* to add spacing between the elements use padding  */
+    /* adding padding to the element will add space between each element
+    content */
+    flex-direction: flex-start;
+    align-items: center;
+
+
+    
+}
