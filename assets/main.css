@@ -3,11 +3,16 @@
     margin: 0;
     padding: 0;
 }
-
+ :root {
+    --light: aquamarine;
+    --dark: rgb(71, 71, 71);
+    --border: whitesmoke;
+ }
  
  body {
     padding: 10px;
-    background-color: whitesmoke;
+    background-color: var(--dark);
+    color: white;
  }
 
  #viewport {
@@ -16,6 +21,10 @@
      flex-direction: column;
      /* adds a gap under the header  between the vertical  */
      gap: 30px;
+ }
+
+ header {
+     font-size: 300%;
  }
 /*grabed the header footer and columns and adds outline to it  */
 header, footer, .column { 
@@ -85,22 +94,47 @@ set up flex for the columns  */
     display: flex;
     flex-direction: row; 
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 1.2rem;
+    gap: 10px
 } 
+
+
+
+.img {
+    border-radius: 10px;
+}
 
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    max-width: 50%;
-    
+    max-height: 45%;
+    max-width: 35%;
+    background-image: linear-gradient(to bottom right,
+        var(--light),
+        var(--dark)
+    );
+    border-radius: 10px;
   }
   
   /* On mouse-over, add a deeper shadow */
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: inset 0px 0px 8px var(--light), 0 0 15px var(--light);
   }
+  .code:hover,
+.code:hover .card-header {
+  box-shadow: inset 0px 0px 8px var(--light), 0 0 15px var(--light);
+}
   
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
   /* Add some padding inside the card container */
   .container {
     padding: 2px 16px;
+    font-size: 30px;
+    color: var(--dark);
+    text-align: center;
   }
