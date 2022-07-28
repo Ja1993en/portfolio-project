@@ -24,14 +24,18 @@
  }
 
  header {
-     font-size: 300%;
+     display: flex;
+     flex-direction: column;
+     font-size: 200%;
+     align-items: center;
  }
 /*grabed the header footer and columns and adds outline to it  */
 header, footer, .column { 
-     outline: 1px solid black;
+     outline: 1px solid var(--light);
      min-height: 100px;
      display: flex;
      justify-content: center;
+     border-radius: 10px;
  }
  
  
@@ -39,18 +43,21 @@ header, footer, .column {
  header, footer {
      /* make the width 100% of the page  */
      width: 100%;
+     box-shadow: inset 0px 0px 8px var(--light), 0 0 15px var(--light);
  }
 
 .column {
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
     /* vh take as much space it can */
     height: 100vh;
     /* sets the middle to 60% width */
     /* width: 70%; */
     /* add paddin to the left specifically  */
-    padding-left: 20px;
+    padding-left: 10px;
     /* add padding to the right specifically */
     padding-right: 20px;
+    box-shadow: inset 0px 0px 8px var(--light), 0 0 15px var(--light);
+    
     
 }
 
@@ -59,12 +66,17 @@ header, footer, .column {
     flex-direction: row;
     flex-wrap: wrap;
     width: 70%;
+    
 }
 
 
 .column1, .column3 {
+     display: flex;
+    flex-direction: column; 
+     flex-wrap: wrap; 
     width: 15%;
     height: 400px;
+    text-align: center;
 
 }
 
@@ -122,10 +134,10 @@ set up flex for the columns  */
   .card:hover {
     box-shadow: inset 0px 0px 8px var(--light), 0 0 15px var(--light);
   }
-  .code:hover,
+  /* .code:hover,
 .code:hover .card-header {
   box-shadow: inset 0px 0px 8px var(--light), 0 0 15px var(--light);
-}
+} */
   
   a {
     color: inherit;
@@ -138,3 +150,14 @@ set up flex for the columns  */
     color: var(--dark);
     text-align: center;
   }
+
+.avatar {
+    vertical-align: middle;
+    width: 90%;
+    height: 45%;
+    border-radius: 50%;
+}
+
+.job {
+    font-size: 30px;
+}
