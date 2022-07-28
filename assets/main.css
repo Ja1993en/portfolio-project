@@ -194,9 +194,11 @@ li:hover {
 
 li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 .card-header {
+    font-size: 30px;
     margin-bottom: 10px;
 }
 .skill-header {
